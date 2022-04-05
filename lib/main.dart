@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
         .doc('DocumentTest')
         .get()
         .then((DocumentSnapshot snapshot) {
-      var count = snapshot.get('FieldTest');
+      var count = snapshot.get('count');
       debugPrint(count.toString());
       setState(() {
         _counter = count as int;
@@ -53,10 +53,11 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void _incrementCounter() {
+  void _incrementCounter() async {
     setState(() {
       _counter++;
     });
+    await FirebaseFirestore.instance.collection('CollectionTest').doc('DocumentTest').set({'count': _counter});
   }
 
   @override

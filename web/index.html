@@ -100,5 +100,21 @@
       loadMainDartJs();
     }
   </script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script>
+    const firebaseConfig = {
+          apiKey: "AIzaSyAmuebv7fMHnvF0eGaUQtW__z5iSL6B3Jg",
+          authDomain: "shopping-list-366bc.firebaseapp.com",
+          projectId: "shopping-list-366bc",
+          storageBucket: "shopping-list-366bc.appspot.com",
+          messagingSenderId: "711909170732",
+          appId: "1:711909170732:web:0e3d1f2e4fe35326e67b89",
+          measurementId: "G-JCGYPW2ZX7"
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+   </script>
 </body>
 </html>
